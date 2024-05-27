@@ -1,0 +1,57 @@
+.container_cartelera{
+    display: flex;
+    margin-top: 20px;
+    background-color:gainsboro;
+}
+
+.pelicula{
+    height: 90px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container_cartelera_promo{
+    display: flex;
+    margin-top: 20px;
+}
+
+.peliculas{
+    display: flex;
+    background-color: gainsboro;
+}
+
+.promo{
+    margin-left: 10px;
+    height: 90px;
+    width: 70px;
+}
+
+
+
+.container_peliculas2{
+    margin-left: 20px;
+    width: 880px;
+    
+}
+
+.container_cartelera_2{
+    margin-top: 5px;
+    display: flex;
+    height: 220px;
+}
+
+.filtrar{
+    background-color: gainsboro;
+    width: 200px;
+
+}
+
+.encabezado_filtro{
+    
+    background-color: brown;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
