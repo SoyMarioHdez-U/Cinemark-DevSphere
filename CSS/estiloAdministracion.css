@@ -69,9 +69,10 @@ th, td {
 th {
     background-color: black;
     color: white;
-    font-weight: bolder;
+    font-weight: bold;
+    position: sticky; /* Hace que los encabezados se mantengan fijos */
+    top: 0; /* Se mantiene en la parte superior de la tabla */
 }
-
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
@@ -114,3 +115,16 @@ tr:hover {
     text-decoration: none;
     color: #d1d1d1;
 }
+
+.table-container::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #9e9e9e; /* Color de fondo del scrollbar */
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #800000; /* Color del thumb (barra deslizante) */
+}
+

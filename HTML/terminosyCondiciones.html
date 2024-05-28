@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y condiciones</title>
+    <link rel="icon" href="/SRC/Resources/Cinemark_-_2022_icon.png" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/estiloIndex.css">
+
+    <!-- Font Awesome CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .custom-container {
+            display: flex;
+        }
+        .custom-buttons {
+            display: flex;
+            flex-direction: column;
+        }
+        .custom-button {
+            background-color: white;
+            color: black;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 5px;
+            text-align: left;
+            cursor: pointer;
+            transition: padding-left 0.3s;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .custom-button.active {
+            border-left: 5px solid red;
+            padding-left: 15px;
+            background-color:#f9f9f9;
+        }
+        .custom-content {
+            flex-grow: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <a class="navbar-brand" href="/HTML/index.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Cinemark_Logo.svg" width="128" height="30" class="d-inline-block align-top" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/HTML/index.html">Inicio </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/HTML/cartelera.html">Cartelera <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/HTML/proximos-estrenos.html">Próximos estrenos</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<img src="/SRC/Resources/Encabezado.png" alt="" style="margin: 15px; width: 98%;">
+
+<div class="container_estrenos">
+    <h3 style="font-family: Montserrat;"><b>TÉRMINOS Y CONDICIONES</b></h3>
+    <h6 style="font-family: 'Montserrat', sans-serif;">Conoce más de Cinemark</h6>
+    
+    <div class="custom-container">
+        <div class="custom-buttons">
+            <button class="custom-button" onclick="showContent('button1')">Términos y condiciones</button>
+            <button class="custom-button" onclick="showContent('button2')">Política de privacidad</button>
+            <button class="custom-button" onclick="showContent('button3')">Términos y condiciones de CinePlus</button>
+            <button class="custom-button" onclick="showContent('button4')">Política de cookies</button>
+        </div>
+        <div class="custom-content" id="content" style="font-family: 'Montserrat', sans-serif; text-align: justify;"></div>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" style="background-color:lightgray;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="Red_Social">
+      <div class="rede_sociales" style="display: flex;">
+        <div class="facebook" target="_blank style="display: flex; justify-content: flex-start;">
+          <a href="https://www.facebook.com/cinemarksv" style="text-decoration: none; color: inherit; display: flex;">
+            <img src="/SRC/Resources/ico-footer-facebook.webp" alt="" height="40px">
+            <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>FACEBOOK</b> <br> CINEMARKSV</p>
+          </a>
+          
+        </div>
+
+        <div class="twitter" target="blank" style="display: flex; justify-content: flex-start; margin-left: 150px;">
+          <a href="https://twitter.com/cinemarksv" style="text-decoration: none; color: inherit; display: flex;">
+            <img src="/SRC/Resources/ico-footer-twitter.webp" alt="" height="40px">
+            <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>TWITTER</b> <br> CINEMARKSV</p>
+          </a>
+          
+        </div>
+
+        <div class="instagram" style="display: flex; justify-content: flex-start; margin-left: 150px;">
+          <a href="https://www.instagram.com/cinemark_caksv" target="blank" style="text-decoration: none; color: inherit; display: flex;">
+            <img src="/SRC/Resources/ico-footer-instagram.webp" alt="" height="40px">
+            <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>INSTAGRAM</b> <br> CINEMARK_CA</p>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div style="justify-content: flex-start">
+      <p style="text-align: left;"><b>DESCARGA LA APP</b></p>
+      
+        <div class="aplicaciones" style="display: flex;">
+          <a href="https://play.google.com/store/apps/details?id=com.cinemarkca.cinemarkapp" target="_blank">
+          <img src="/SRC/Resources/google.webp" alt="" style="height: 50px;">
+          </a>
+          <a href="https://apps.apple.com/us/app/cinemarkca/id929218361" target="_blank">
+            <img src="/SRC/Resources/apple.webp" alt="" style="height: 50px; margin-left: 10px;">
+          </a>
+        </div>
+      
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="align-items: center;">
+          <!-- Content -->
+          <img src="/SRC/Resources/Logo-header-footer.webp" alt="" style="width: 200px;">
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            PROGRAMACIÓN
+          </h6>
+          <hr>
+          <p>
+            <a href="/HTML/cartelera.html" class="text-reset" style="text-decoration: none; color: inherit;">Cartelera</a>
+          </p>
+          <p>
+            <a href="/HTML/proximos-estrenos.html" class="text-reset" style="text-decoration: none; color: inherit;">Próximos estrenos</a>
+          </p>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            SOBRE CINEMARK
+          </h6>
+          <hr>
+          <p>
+            <a href="/HTML/quienesSomos.html"  class="text-reset" style="text-decoration: none; color: inherit; ">Quiénes Somos</a>
+          </p>
+          <p>
+            <a href="/HTML/terminosyCondiciones.html" class="text-reset" style="text-decoration: none; color: inherit; ">Términos y condiciones</a>
+          </p>
+         
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            CONTÁCTANOS
+          </h6>
+          <hr>
+          <p>
+            <a href="/HTML/contactanos.html" class="text-reset" style="text-decoration: none; color: inherit;">Escríbenos</a>
+          </p>
+          
+         
+        </div>
+        
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright - Cinemark Santa Ana
+    
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+<script>
+  var buttons = document.querySelectorAll('.custom-button');
+
+  function showContent(button) {
+    var contentElement = document.getElementById("content");
+    buttons.forEach(btn => {
+      if(btn.getAttribute('onclick').includes(button)) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+    switch(button) {
+      case 'button1':
+        contentElement.innerHTML = `
+          <h3 style="color: red;"><b>TÉRMINOS Y CONDICIONES DE USO DEL SITIO WEB</b></h3>
+          <p>Fecha de Efectividad: 1 de junio de 2021</p>
+          <p>El presente documento regula los términos y condiciones de uso, en adelante “Términos y Condiciones”, del sitio web (www.cinemarkca.com) y de la aplicación de móvil (Cinemark CA), en adelante, ambos en conjunto, el “Sitio Web”, de Cinemark Costa Rica, S.R.L., Cinemark El Salvador, Ltda. De C.V., Cinemark Guatemala Limitada, Cinemark Honduras S. de R.L., Cinemark Nicaragua y Cia. Ltda., y Cinemark Panamá, S.A., que en adelante juntos son “Cinemark”, en cuales un usuario, consumidor, comprador, cliente o usted, en adelante el “Usuario” o “Usted”, tiene derecho a ingresar y usar el Sitio Web para comprar entradas de cine, o cualquier otro producto disponible en el mismo, contratar cualquier servicio disponible en el mismo, y/o acceder a información, texto, video u otro material comunicado en el Sitio Web. En el Sitio Web podrá usar el software y las aplicaciones para equipos móviles que le permitan navegar, visitar, comparar y, si lo desea, adquirir los bienes o servicios que ahí se exhiben.</p>
+          <p>Estos Términos y Condiciones serán aplicados en cada instancia en que Usted use el Sitio Web. Cinemark podrá en cualquier momento introducir cambios a estos Términos y Condiciones, los que empezarán a regir desde el momento en que sean subidos al Sitio Web y respecto de accesos, usos y operaciones de compra realizadas a partir de dicho cambio. </p>
+          <p>El uso del Sitio Web, la aplicación de estos Términos y Condiciones, los actos que ejecute por medio del Sitio Web, se encuentran sujetos a las leyes del país correspondiente a la página del Sitio Web que el Usuario acceda. En el evento en que una o varias disposiciones de estos Términos y Condiciones sean declaradas nulas, ineficaces o contrarias a la Ley Aplicable, ello no implicará la nulidad, ineficacia o ilegalidad de las disposiciones restantes, las cuales seguirán siendo vinculantes y obligatorias para las partes y permanecerán en pleno vigor y efecto.</p>
+        `;
+        break;
+      case 'button2':
+        contentElement.innerHTML = `
+          <h3 style="color: red;"><b>POLÍTICA DE PRIVACIDAD</b></h3>
+          <p>Fecha de Efectividad: 1 de junio de 2021</p>
+          <p>Cinemark es una marca internacional de exhibición de títulos cinematográficos originaria de Dallas, Texas, con presencia en El Salvador operando en San Miguel en Centro Comercial Metrocentro, en San Salvador en centro comercial Metrocentro y en Antiguo Cuscatlán en Centro comercial La Gran Vía.</p>
+          <p>Información Jurídica: <br>
+          Cinemark El Salvador, Ltda. De C.V.<br>
+          Dominio Web cinemarkca.com<br><br>
+          Dirección de casa Matriz: Carretera Panamericana y Calle Chiltuipán Edificio Cinemark Centro de Estilo de Vida La Gran Vía, Antiguo Cuscatlán, La Libertad.<br><br>
+          Registrado por Cinemark Holdings, Inc. a través de Network Solutions LLC. Registrante: PERFECT PRIVACY, LLC<br><br>
+          Dirección del Registrante:<br> 5335 Gate Parkway care of Network Solutions PO Box 459, Jacksonville Florida, Postal Code: 32256.<br><br>
+          Número de Identificación Tributaria: <br> 0614-110797-102-0<br><br>
+          Numero de Registro: 100100-0 </p>
+          <p>El presente documento establece la Política de Privacidad aplicable al tratamiento de datos personales realizado a través de sitio web (https://www.cinemarkca.com/) y de la aplicación móvil (Cinemark CA) (en adelante, conjuntamente, el “Sitio Web”), de Cinemark Costa Rica, S.R.L.,Cinemark Curaçao, B.V., Cinemark El Salvador, Ltda. De C.V., Cinemark Guatemala Limitada,Cinemark Honduras S. de R.L., Cinemark Nicaragua y Cia. Ltda., y Cinemark Panamá, S.A. (en adelante juntos son “Cinemark”) quienes serán considerados responsables del tratamiento de datos personales del país del Sitio Web que el Usuario acceda.</p>
+        `;
+        break;
+      case 'button3':
+        contentElement.innerHTML = `
+          <h3 style="color: red;"><b>TÉRMINOS Y CONDICIONES DE CINEPLUS</b></h3>
+          <p>Fecha de Efectividad: 1 de junio de 2021</p>
+          <p>El presente documento regula los términos y condiciones del programa de lealtad “CinePlus”, ofrecido por Cinemark Costa Rica, S.R.L., Cinemark El Salvador, Ltda. De C.V., Cinemark Guatemala Limitada, Cinemark Honduras S. de R.L., Cinemark Nicaragua y Cia. Ltda., y Cinemark Panamá, S.A., que en adelante juntos son “Cinemark”.</p>
+          <p>El programa CinePlus es un programa de lealtad mediante el cual los usuarios pueden acumular puntos por cada compra realizada en los establecimientos de Cinemark, para luego canjearlos por beneficios y descuentos. El uso del programa CinePlus está sujeto a los siguientes términos y condiciones:</p>
+          <ul>
+            <li>Los puntos acumulados no tienen valor monetario y no pueden ser transferidos o vendidos.</li>
+            <li>Los puntos acumulados solo pueden ser canjeados en los establecimientos de Cinemark participantes.</li>
+            <li>Cinemark se reserva el derecho de modificar o cancelar el programa CinePlus en cualquier momento sin previo aviso.</li>
+          </ul>
+          <p>El uso del programa CinePlus implica la aceptación de estos términos y condiciones.</p>
+        `;
+        break;
+      case 'button4':
+        contentElement.innerHTML = `
+          <h3 style="color: red;"><b>POLÍTICA DE COOKIES</b></h3>
+          <p>Fecha de Efectividad: 1 de junio de 2021</p>
+          <p>En Cinemark, utilizamos cookies para mejorar su experiencia en nuestro sitio web. Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita nuestro sitio web. Utilizamos cookies para:</p>
+          <ul>
+            <li>Recordar sus preferencias y configuraciones.</li>
+            <li>Realizar un seguimiento de sus actividades en nuestro sitio web.</li>
+            <li>Analizar el tráfico y uso del sitio web.</li>
+            <li>Proporcionar contenido y publicidad personalizados.</li>
+          </ul>
+          <p>Puede configurar su navegador para rechazar las cookies o para recibir una notificación cuando se envíen cookies a su dispositivo. Sin embargo, si rechaza las cookies, es posible que algunas funciones de nuestro sitio web no funcionen correctamente.</p>
+          <p>Al utilizar nuestro sitio web, usted acepta el uso de cookies de acuerdo con esta política.</p>
+        `;
+        break;
+    }
+  }
+</script>
+
+</body>
+</html>

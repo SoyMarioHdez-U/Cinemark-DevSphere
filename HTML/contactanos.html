@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartelera</title>
+    <title>Contáctanos</title>
     <link rel="icon" href="/SRC/Resources/Cinemark_-_2022_icon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/CSS/estiloIndex.css">
+    
      <!-- Font Awesome CSS -->
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
+     <style>
+      .btn-red-light {
+          background-color: #dc3545;
+          border-color: #dc3545;
+          transition: background-color 0.3s, border-color 0.3s;
+      }
+  
+      .btn-red-light:hover {
+          background-color: #ff495c;
+          border-color: #ff495c;
+      }
+  </style>
 </head>
 <body>
 
@@ -27,10 +39,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="/HTML/index.html">Inicio </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/HTML/cartelera.html">Cartelera <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="/HTML/proximos-estrenos.html">Próximos estrenos</a>
             </li>
         </ul>
@@ -41,29 +53,16 @@
 
 <img src="/SRC/Resources/Encabezado.png" alt="" style="margin: 15px; width: 98%;">
 
-<div class="container_cartelera_2">
-    <div class="filtrar">
-        <div class="encabezado_filtro">
-            <b>FILTRAR RESULTADOS</b>
-        </div>
-        <label for="fecha">Seleccione una fecha:</label>
-            <select id="fecha" name="fecha">
-                <option value="" disabled selected>-Seleccione una fecha-</option>
-                <option value="2024-06-01">1 de Junio, 2024</option>
-                <option value="2024-06-02">2 de Junio, 2024</option>
-                <option value="2024-06-03">3 de Junio, 2024</option>
-                <option value="2024-06-04">4 de Junio, 2024</option>
-                <option value="2024-06-05">5 de Junio, 2024</option>
-            </select>
+<div class="container_estrenos">
+    <H3 style="font-family: Montserrat;">
+      <b>ESCRÍBENOS</b>
+    </H3>
+    <H6 style="font-family: 'Montserrat', sans-serif;">Queremos saber qué opinas de nosotros</H6>
+    
+    <button class="btn btn-danger" style="margin-bottom: 100px;" onclick="window.location.href = 'https://clientescinemark.zendesk.com/hc/es/requests/new';">Escríbenos</button>
 
-    </div>
-    <div class="container_peliculas2">
-        Peliculas
-    </div>
-    <div class="container_promo">
-        Promo
 
-    </div>
+          
 </div>
 
 
@@ -207,7 +206,6 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
-
 
 
 </body>
