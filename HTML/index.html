@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinemark Santa Ana</title>
+    <link rel="icon" href="/SRC/Resources/Cinemark_-_2022_icon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -13,8 +14,8 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <a class="navbar-brand" href="/HTML/index.html">
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Cinemark_Logo.svg" width="128" height="30" class="d-inline-block align-top" alt="Logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,19 +24,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/HTML/index.html">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Cartelera</a>
+                <a class="nav-link" href="/HTML/cartelera.html">Cartelera</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Próximos estrenos</a>
+                <a class="nav-link" href="/HTML/proximos-estrenos.html">Próximos estrenos</a>
             </li>
         </ul>
     </div>
 </nav>
     
-<div class="carrusel">
+<div class="carrusel" style="margin: 15px;">
   <div id="carouselExampleRide" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -60,24 +61,24 @@
 </div>
 
 <!-- Aquí se muestran las películas -->
-<div class="container_cartelera_promo">
+<div class="container_cartelera_promo" style="margin: 15px;">
   <div class="peliculas">
     <img src="/SRC/Resources/AVISO.png" height="300px">
     <div class="pelicula">
-      <a href="#"><img src="/SRC/Movies/1_Garfield.webp" alt="" height="280px"></a>
+      <a href="#"><img src="/SRC/Movies/1_Garfield.webp" alt="" height="280px;" width="200px"></a>
     </div>
     <div class="pelicula">
-      <a href="#"><img src="/SRC/Movies/Amigos imaginarios.webp" alt="" height="280px"></a>
+      <a href="#"><img src="/SRC/Movies/Amigos imaginarios.webp" alt="" height="280px" width="200px"></a>
     </div>
     <div class="pelicula">
-      <a href="#"><img src="/SRC/Movies/Cazafantasmas_Imperio_helado-183801540-large.jpg" alt="" height="280px"></a>
+      <a href="#"><img src="/SRC/Movies/Cazafantasmas_Imperio_helado-183801540-large.jpg" alt="" height="280px" width="200px"></a>
     </div>
     <div class="pelicula">
-      <a href="#"><img src="/SRC/Movies/dQWpXwL2z4NdU86zn8Go3un8PmX.jpg" alt="" height="280px"></a>
+      <a href="#"><img src="/SRC/Movies/dQWpXwL2z4NdU86zn8Go3un8PmX.jpg" alt="" height="280px" width="200px"></a>
     </div>
   </div>
   <div class="promo">
-    <img src="/SRC/Resources/Promo.png" alt="" height="300px">
+    <img src="/SRC/Resources/Promo.png" alt="" height="300px" width="270px">
   </div>
 </div>
 
@@ -87,21 +88,132 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-<footer class="bg-body-tertiary text-center">
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2024 Cinemark - Todos los derechos reservados
-        <br>
-        <a href="https://www.facebook.com/cinemarksv/?locale=es_LA">
-            <img href="https://www.facebook.com/cinemarksv/?locale=es_LA" src="/SRC/Resources/facebook.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
-        </a>
-        <a href="https://x.com/CinemarkSV">
-            <img src="/SRC/Resources/gorjeo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
-        </a>
-        <a href="https://www.instagram.com/cinemark_ca/?hl=es">
-            <img src="/SRC/Resources/instagram.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
-        </a>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" style="background-color:lightgray;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="Red_Social">
+      <div class="rede_sociales" style="display: flex;">
+        <div class="facebook" target="_blank style="display: flex; justify-content: flex-start;">
+          <a href="https://www.facebook.com/cinemarksv" style="text-decoration: none; color: inherit; display: flex;">
+            <img src="/SRC/Resources/ico-footer-facebook.webp" alt="" height="40px">
+            <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>FACEBOOK</b> <br> CINEMARKSV</p>
+          </a>
+          
+        </div>
+
+        <div class="twitter" target="blank" style="display: flex; justify-content: flex-start; margin-left: 150px;">
+          <a href="https://twitter.com/cinemarksv" style="text-decoration: none; color: inherit; display: flex;">
+            <img src="/SRC/Resources/ico-footer-twitter.webp" alt="" height="40px">
+            <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>TWITTER</b> <br> CINEMARKSV</p>
+          </a>
+          
+        </div>
+
+        <div class="instagram" style="display: flex; justify-content: flex-start; margin-left: 150px;">
+          <a href="https://www.instagram.com/cinemark_caksv" target="blank" style="text-decoration: none; color: inherit; display: flex;">
+            <img src="/SRC/Resources/ico-footer-instagram.webp" alt="" height="40px">
+            <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>INSTAGRAM</b> <br> CINEMARK_CA</p>
+          </a>
+          
+        </div>
+      </div>
     </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div style="justify-content: flex-start">
+      <p style="text-align: left;"><b>DESCARGA LA APP</b></p>
+      
+        <div class="aplicaciones" style="display: flex;">
+          <a href="https://play.google.com/store/apps/details?id=com.cinemarkca.cinemarkapp"></a>
+          <img src="/SRC/Resources/google.webp" alt="" style="height: 50px;">
+          <img src="/SRC/Resources/apple.webp" alt="" style="height: 50px; margin-left: 10px;">
+          </a>
+        </div>
+      
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="align-items: center;">
+          <!-- Content -->
+          <img src="/SRC/Resources/Logo-header-footer.webp" alt="" style="width: 200px;">
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            PROGRAMACIÓN
+          </h6>
+          <hr>
+          <p>
+            <a href="/HTML/cartelera.html" class="text-reset" style="text-decoration: none; color: inherit;">Cartelera</a>
+          </p>
+          <p>
+            <a href="/HTML/proximos-estrenos.html" class="text-reset" style="text-decoration: none; color: inherit;">Próximos estrenos</a>
+          </p>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            SOBRE CINEMARK
+          </h6>
+          <hr>
+          <p>
+            <a href="#!"  class="text-reset" style="text-decoration: none; color: inherit; ">Quiénes Somos</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset" style="text-decoration: none; color: inherit; ">Términos y condiciones</a>
+          </p>
+         
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            CONTÁCTANOS
+          </h6>
+          <hr>
+          <p>
+            <a href="#!" class="text-reset" style="text-decoration: none; color: inherit;">Escríbenos</a>
+          </p>
+          
+         
+        </div>
+        
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright - Cinemark Santa Ana
+    
+  </div>
+  <!-- Copyright -->
 </footer>
+<!-- Footer -->
+
 
 </body>
+
 </html>

@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartelera</title>
+    <title>Cinemark</title>
     <link rel="icon" href="/SRC/Resources/Cinemark_-_2022_icon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/CSS/estiloIndex.css">
+    
      <!-- Font Awesome CSS -->
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
@@ -16,7 +17,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-    <a class="navbar-brand" href="/HTML/index.html">
+    <a class="navbar-brand" href="#">
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Cinemark_Logo.svg" width="128" height="30" class="d-inline-block align-top" alt="Logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,10 +28,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="/HTML/index.html">Inicio </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/HTML/cartelera.html">Cartelera <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="/HTML/proximos-estrenos.html">Próximos estrenos</a>
             </li>
         </ul>
@@ -41,29 +42,55 @@
 
 <img src="/SRC/Resources/Encabezado.png" alt="" style="margin: 15px; width: 98%;">
 
-<div class="container_cartelera_2">
-    <div class="filtrar">
-        <div class="encabezado_filtro">
-            <b>FILTRAR RESULTADOS</b>
+<div class="container_estrenos">
+    <H3 style="font-family: Montserrat;">
+      <b>PRÓXIMOS ESTRENOS</b>
+    </H3>
+    <div class="container_proximos_estrenos">
+      
+        <div class="estreno">
+          <div class="etiqueta">Próximamente</div>
+          <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2024/04/poster-oficial-bad-boys-ride-or-die-3298574.jpg?tf=3840x" alt="">
+          <div class="fecha_estreno">
+            <p>06 JUNIO 2024</p>
+          </div>
         </div>
-        <label for="fecha">Seleccione una fecha:</label>
-            <select id="fecha" name="fecha">
-                <option value="" disabled selected>-Seleccione una fecha-</option>
-                <option value="2024-06-01">1 de Junio, 2024</option>
-                <option value="2024-06-02">2 de Junio, 2024</option>
-                <option value="2024-06-03">3 de Junio, 2024</option>
-                <option value="2024-06-04">4 de Junio, 2024</option>
-                <option value="2024-06-05">5 de Junio, 2024</option>
-            </select>
 
-    </div>
-    <div class="container_peliculas2">
-        Peliculas
-    </div>
-    <div class="container_promo">
-        Promo
+        <div class="estreno">
+          <div class="etiqueta">Próximamente</div>
+          <img src="https://palomaynacho-1f321.kxcdn.com/wp-content/uploads/2023/11/Poster-pelicula-Intensamente-2-jpg.webp" alt="">
+          <div class="fecha_estreno">
+            <p>13 JUNIO 2024</p>
+          </div>
+        </div>
 
+        <div class="estreno">
+          <div class="etiqueta">Próximamente</div>
+          <img src="https://es.web.img2.acsta.net/pictures/23/12/21/15/46/3034174.jpg" alt="">
+          <div class="fecha_estreno">
+            <p>04 JULIO 2024</p>
+          </div>
+        </div>
+
+        <div class="estreno">
+          <div class="etiqueta">Próximamente</div>
+          <img src="https://cdnb.artstation.com/p/assets/images/images/050/326/635/large/rahal-nejraoui-deapdool-3-poster-4-by-rahalarts.jpg?1654601588" alt="">
+          <div class="fecha_estreno">
+            <p>26 JULIO 2024</p>
+          </div>
+        </div>
+
+        <div class="estreno">
+          <div class="etiqueta">Próximamente</div>
+          <img src="https://hips.hearstapps.com/hmg-prod/images/joker-2-poster-660d1344c56e8.jpeg" alt="">
+          <div class="fecha_estreno">
+            <p>04 OCTUBRE 2024</p>
+          </div>
+        </div>
+
+        
     </div>
+    
 </div>
 
 

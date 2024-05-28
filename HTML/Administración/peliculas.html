@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración - Cinemark</title>
+
+
+    <link rel="icon" href="/SRC/Resources/Cinemark_-_2022_icon.png" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/estiloAdministracion.css">
+    
+     <!-- Font Awesome CSS -->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <a class="navbar-brand" href="/HTML/index.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Cinemark_Logo.svg" width="128" height="30" class="d-inline-block align-top" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/HTML/Administración/indexAdmin.html" style="font-family: 'Montserrat', sans-serif ;">Administración <span class="sr-only">(current)</span></a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- AQUÍ VA EL CONTENIDO--> 
+    <div class="container_peliculasAdmin" style="margin-top: 20px; margin-left: 165px; margin-right: 165px;">
+        <h3 style="font-family: 'Montserrat', sans-serif; font-weight: bolder;">Películas</h3>
+        <p style="font-family: 'Montserrat', sans-serif; margin-top: 5px;">Listado de todas las peliculas</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>PELÍCULA</th>
+                        <th>DURACIÓN</th>
+                        <th>DIRECTOR</th>
+                        <th>IDIOMA</th>
+                        <th>ESTADO</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>1</b></td>
+                        <td>El Padrino</td>
+                        <td>175 min</td>
+                        <td>Francis Ford Coppola</td>
+                        <td>Inglés</td>
+                        <td>Disponible</td>
+                        <td><a class="details-link" href="detalles.html">Ver más</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>2</b></td>
+                        <td>La lista de Schindler</td>
+                        <td>195 min</td>
+                        <td>Steven Spielberg</td>
+                        <td>Inglés</td>
+                        <td>Disponible</td>
+                        <td><a class="details-link" href="detalles.html">Ver más</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>3</b></td>
+                        <td>Inception</td>
+                        <td>148 min</td>
+                        <td>Christopher Nolan</td>
+                        <td>Inglés</td>
+                        <td>Disponible</td>
+                        <td><a class="details-link" href="detalles.html">Ver más</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>4</b></td>
+                        <td>El laberinto del fauno</td>
+                        <td>118 min</td>
+                        <td>Guillermo del Toro</td>
+                        <td>Español</td>
+                        <td>Disponible</td>
+                        <td><a class="details-link" href="detalles.html">Ver más</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>5</b></td>
+                        <td>Amélie</td>
+                        <td>122 min</td>
+                        <td>Jean-Pierre Jeunet</td>
+                        <td>Francés</td>
+                        <td>Disponible</td>
+                        <td><a class="details-link" href="detalles.html">Ver más</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>6</b></td>
+                        <td>Parasite</td>
+                        <td>132 min</td>
+                        <td>Bong Joon-ho</td>
+                        <td>Coreano</td>
+                        <td>Disponible</td>
+                        <td><a class="details-link" href="detalles.html">Ver más</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>7</b></td>
+                        <td>El viaje de Chihiro</td>
+                        <td>125 min</td>
+                        <td>Hayao Miyazaki</td>
+                        <td>Japonés</td>
+                        <td>Disponible</td>
+                        <td><a class="details-link" href="detalles.html">Ver más</a></td>
+                    </tr>
+
+                    <tr>
+                        <td><b>8</b></td>
+                        <td>Garfiel: Fuera de casa</td>
+                        <td>125 min</td>
+                        <td>Tom Hanks</td>
+                        <td>Español</td>
+                        <td>Disponible</td>
+                        <td><a class="details-link" href="detalles.html">Ver más</a></td>
+                    </tr>
+                    <!-- Puedes agregar más filas aquí según sea necesario -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+        <a href="HTML/Administración/indexAdmin.html" class="back-button" style="margin-top: 10px; margin-bottom: 20px; margin-left: 165px; display: inline-block;">Volver</a>
+    </div>
+    
+
+    
+
+    
+    
+</body>
+
+<footer class="bg-body-tertiary text-center text-lg-start" style="background-color: lightgray;">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024 Copyright:
+      <a class="text-body" href="/HTML/index.html">Cinemark Santa Ana</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</html>

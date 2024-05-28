@@ -36,9 +36,9 @@
 }
 
 .container_cartelera_2{
-    margin-top: 5px;
     display: flex;
     height: 220px;
+    margin: 15px;
 }
 
 .filtrar{
@@ -55,3 +55,58 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
 }
+
+.body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container_estrenos{
+    margin: 15px;
+}
+
+.estreno img{
+    height: 300px;
+    width: 217px;
+    margin-right: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.fecha_estreno{
+    background-color: brown;
+    color: rgb(255, 255, 255);
+    width: 217px
+}
+
+.fecha_estreno p{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.container_proximos_estrenos{
+    display: flex;
+    margin-right: 15px;
+}
+
+.estreno {
+    position: relative;
+    width: 217px; /* Ajusta el ancho según tus necesidades */
+    height: 320px; /* Ajusta la altura según tus necesidades */
+    margin-right: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+.etiqueta {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(88, 10, 10, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 10;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: small;
+  }
