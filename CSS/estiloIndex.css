@@ -43,7 +43,7 @@
 
 .filtrar{
     background-color: gainsboro;
-    width: 200px;
+    width: 250px;
 
 }
 
@@ -160,4 +160,13 @@
 .custom-button.active {
     border-left-color: #ff0000;
     padding-left: 17px;
+}
+
+
+
+
+/* ESTILO PARA LAS PELÍCULAS DE LA CARTELERA*/
+.pelicula_cartelera img{
+    width: 180px;
+    height: 260px;
 }

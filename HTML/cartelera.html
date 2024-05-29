@@ -41,31 +41,49 @@
 
 <img src="/SRC/Resources/Encabezado.png" alt="" style="margin: 15px; width: 98%;">
 
-<div class="container_cartelera_2">
+<div class="container_cartelera_2" style="height: 600px;">
     <div class="filtrar">
         <div class="encabezado_filtro">
             <b>FILTRAR RESULTADOS</b>
         </div>
-        <label for="fecha">Seleccione una fecha:</label>
-            <select id="fecha" name="fecha">
-                <option value="" disabled selected>-Seleccione una fecha-</option>
-                <option value="2024-06-01">1 de Junio, 2024</option>
-                <option value="2024-06-02">2 de Junio, 2024</option>
-                <option value="2024-06-03">3 de Junio, 2024</option>
-                <option value="2024-06-04">4 de Junio, 2024</option>
-                <option value="2024-06-05">5 de Junio, 2024</option>
-            </select>
+        <label for="fecha" class="mr-2" style="margin-left: 10px; margin-top: 10px;">Seleccione una fecha:</label>
+        <select id="fecha" name="fecha" class="form-control" style="width: 175px; margin-left: 10px;">
+            <option value="" disabled selected>-Seleccionar fecha-</option>
+            <option value="2024-06-01">1 de Junio</option>
+            <option value="2024-06-02">2 de Junio</option>
+            <option value="2024-06-03">3 de Junio</option>
+            <option value="2024-06-04">4 de Junio</option>
+            <option value="2024-06-05">5 de Junio</option>
+        </select>
 
     </div>
     <div class="container_peliculas2">
-        Peliculas
+        
+        <div class="pelicula_cartelera" style="display: flex;">
+          <img src="https://www.infobae.com/new-resizer/ghYgG1TY5pXJ-1RPkj74kPftDJM=/768x1024/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/ROADCHVJRZBIPDW3BKDM36NWAM.jpg" alt="">
+          <div class="info_peli" style="margin-left: 20px;">
+            <h4 style="font-family: 'Montserrat'; font-weight: 600;">Garfield: Fuera de casa</h4>
+            
+            <span class="badge badge-dark">132 minutos</span>
+            <a href="#" class="badge badge-primary"> <img src="https://cdn2.iconfinder.com/data/icons/social-media-8/512/youtube.png" style="height: 10px; width: 10px;" alt=""> Ver trailer</a>
+            <br>
+            <br>
+            <div class="horarios_pelicula" style="display: flex; margin-top: 20px;">
+              <button type="button" class="btn btn-primary" style="margin-right: 10px;">10:00</button>
+              <button type="button" class="btn btn-primary" style="margin-right: 10px;">12:15</button>
+              <button type="button" class="btn btn-primary" style="margin-right: 10px;">14:30</button>
+            </div>
+          </div>
+        </div>
+        <hr>
     </div>
     <div class="container_promo">
-        Promo
+        <img src="https://pbs.twimg.com/media/EwuVH-HWUAEOu_F.jpg" alt="" height="300px">
 
     </div>
 </div>
 
+<script src="../js/funciones.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Popper JS -->
