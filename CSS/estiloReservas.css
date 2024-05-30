@@ -1,0 +1,100 @@
+.contenedor-reservas{
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.encabezado-entradas{
+    background-color: lightgray;
+    width: 900px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.paso-activo{
+    background-color:brown;
+    width: 300px;
+}
+
+.paso-inactivo{
+    width: 300px;
+}
+
+.paso-activo p,
+.paso-inactivo p {
+    font-weight: bold;
+    font-size: 10px;
+    margin: 0 0 2px; /* Reducido el margen inferior */
+    
+}
+
+.paso-inactivo h6{
+    color: black;
+}
+
+.paso-activo p, h6{
+    color: white;
+}
+
+.paso-activo h6,
+.paso-inactivo h6,
+.paso-activo p,
+.paso-inactivo p {
+    margin-left: 10px;
+    
+    font-family: 'Montserrat', sans-serif;
+}
+
+.paso-activo p, .paso-inactivo p{
+    margin-top: 10px;
+}
+
+.info-boletos{
+    font-family: 'Montserrat', sans-serif;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.contenedor-imagen{
+    display: flex;
+}
+.contenedor-imagen img {
+    filter: hue-rotate(180deg); /* Cambia el color de la imagen a 180 grados en el espectro de colores */
+    height: 20px;
+}
+
+.resumen-boletos{
+    width: 195px;
+    margin-left: 5px;
+    background-color: black;
+}
+
+.resumen-boletos p{
+    color: rgb(134, 31, 31);
+    font-weight: bold;
+    margin: 0 0 2px;
+    font-size: 10px;
+    margin-left: 20px;
+    
+}
+
+.resumen-boletos h5{
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+
+.labels-boletos{
+    display: flex;
+}
+
+.boleto{
+    width: 300px;
+}
+
+.input-small{
+    width: 70px;
+}

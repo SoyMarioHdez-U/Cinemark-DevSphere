@@ -44,6 +44,10 @@ async function cargarFunciones() {
         imagen.src = funcion.imagen;
         imagen.style.width = '175px'; // Ajusta según sea necesario
 
+        imagen.addEventListener('click', () => {
+            window.location.href = `detalle.html?id=${funcion.id_pelicula}`;
+        });
+
         const infoPeli = document.createElement('div');
         infoPeli.className = 'info_peli';
         infoPeli.style.marginLeft = '20px';
@@ -55,7 +59,7 @@ async function cargarFunciones() {
 
         const duracion = document.createElement('span');
         duracion.className = 'badge badge-dark';
-        duracion.textContent = funcion.duracion + ' minutos';
+        duracion.textContent = funcion.duracion + ' mins.';
 
         const trailer = document.createElement('a');
         trailer.href = '#';
@@ -103,31 +107,31 @@ async function cargarFunciones() {
 
         container.appendChild(peliculaCartelera);
         container.appendChild(document.createElement('hr'));
+
+        
     });
 }
 
 function mostrarPopup(videoHTML) {
-    const modal = document.getElementById('trailer-modal');
-    const trailerContent = document.getElementById('trailer-content');
-    
-    trailerContent.innerHTML = videoHTML;
-    modal.style.display = 'block';
+    // Crear el div pop-up
+    const popupDiv = document.createElement('div');
+    popupDiv.className = 'popup';
+
+    // Agregar el contenido directamente al div pop-up
+    popupDiv.innerHTML = videoHTML;
+
+    // Agregar el div pop-up al cuerpo del documento
+    document.body.appendChild(popupDiv);
+
+    // Función para cerrar el pop-up
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'X';
+    closeButton.onclick = () => popupDiv.remove();
+    popupDiv.appendChild(closeButton);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('trailer-modal');
-    const closeBtn = document.querySelector('.close-btn');
 
-    closeBtn.onclick = () => {
-        modal.style.display = 'none';
-    }
 
-    window.onclick = (event) => {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    }
-});
 
 const radios = document.querySelectorAll('input[name="idioma"]');
 radios.forEach(radio => {

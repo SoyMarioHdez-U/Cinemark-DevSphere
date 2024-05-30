@@ -2,26 +2,151 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Reserva de Butacas</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de butacas</title>
+    <link rel="icon" href="/SRC/Resources/Cinemark_-_2022_icon.png" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/estiloIndex.css">
+    <link rel="stylesheet" href="/CSS/estiloReservas.css">
+     <!-- Font Awesome CSS -->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <a class="navbar-brand" href="/HTML/index.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Cinemark_Logo.svg" width="128" height="30" class="d-inline-block align-top" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/HTML/index.html">Inicio </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/HTML/cartelera.html">Cartelera <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/HTML/proximos-estrenos.html">Próximos estrenos</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+   
+<!-- AQUÍ COMIENZA EL CONTENIDO -->
+
+<div class="contenedor-reservas">
+    <h3 style="font-family: 'Montserrat', sans-serif; font-weight: bold;">Proceso de reserva de entradas</h3>
     <div id="entradas" class="step active">
-        <h2>Entradas</h2>
-        <label>Entrada Adulto ($5.50): <input type="number" id="adulto" min="0" value="0"></label><br>
-        <label>Entrada Joven ($3.50): <input type="number" id="joven" min="0" value="0"></label><br>
-        <label>Entrada Adulto Mayor ($2.50): <input type="number" id="adulto_mayor" min="0" value="0"></label><br>
-        <button id="butaca-btn" >Siguiente</button>
+        <div class="encabezado-entradas">
+            <div class="paso-activo">
+                <p>Paso 1:</p>
+                <h6>Boletos</h6>
+            </div>
+            <div class="paso-inactivo">
+                <p>Paso 2:</p>
+                <h6>Seleccionar asientos</h6>
+            </div>
+            <div class="paso-inactivo">
+                <p>Paso 3:</p>
+                <h6>Datos personales</h6>
+            </div>
+            
+    
+        </div>
+        <div class="info-boletos">
+          <div class="seleccionar-boletos">
+            <div class="labels-boletos">
+              <div class="boleto">
+                <label> <img  style="height: 20px;" src="https://cdn-icons-png.flaticon.com/512/708/708721.png" alt="Tu imagen"> ENTRADA ADULTO <b>($5.50)</b>:
+              </div>
+              <div class="cantidad-boletos">
+                <input type="number" id="adulto" min="0" value="0" class="form-control input-small">
+              </div>
+            </div>
+            <br>
+            <div class="labels-boletos">
+              <div class="boleto">
+                <label> <img  style="height: 20px;" src="https://cdn-icons-png.flaticon.com/512/708/708721.png" alt="Tu imagen"> ENTRADA ESTUDIANTE <b>($3.50)</b>:
+              </div>
+              <div class="cantidad-boletos">
+                <input type="number" id="joven" min="0" value="0" class="form-control input-small"></label>
+              </div>
+            </div>
+            <br>
+            <div class="labels-boletos">
+              <div class="boleto">
+                <label> <img  style="height: 20px;" src="https://cdn-icons-png.flaticon.com/512/708/708721.png" alt="Tu imagen"> ENTRADA ADULTO MAYOR: <b>($3.50)</b>:
+              </div>
+              <div class="cantidad-boletos">
+                <input type="number" id="adulto_mayor" min="0" value="0" class="form-control input-small">
+              </div>
+            </div>
+            <br>
+            <button id="butaca-btn" class="btn btn-danger">Siguiente</button>
+          </div>
+          <div class="resumen">
+            <div class="resumen-boletos">
+              <br>
+              <p>TOTAL A PAGAR:</p>
+              <H5>$0.00</h5>
+              <br>
+            </div>
+            <div class="info-peli-reserva">
+              <p>Película:</p>
+              <label for="">Nombre de la peli</label>
+              
+            </div>
+          </div>
+          
+            
+        </div>
+        
     </div>
-
+    
     <div id="reserva-butaca" class="step">
-        <h2>Selecciona tus butacas</h2>
+        <div class="encabezado-entradas">
+            <div class="paso-inactivo">
+                <p>Paso 1:</p>
+                <h6>Boletos</h6>
+            </div>
+            <div class="paso-activo">
+                <p>Paso 2:</p>
+                <h6>Seleccionar asientos</h6>
+            </div>
+            <div class="paso-inactivo">
+                <p>Paso 3:</p>
+                <h6>Datos personales</h6>
+            </div>
+            
+    
+        </div>
         <div id="butacas-container"></div>
-        <button id="reserva-btn" >Siguiente</button>
+        <button id="reserva-btn" class="btn btn-primary">Siguiente</button>
     </div>
-
+    
     <div id="factura" class="step">
-        <h2>Información del Cliente</h2>
+        <div class="encabezado-entradas">
+            <div class="paso-inactivo">
+                <p>Paso 1:</p>
+                <h6>Boletos</h6>
+            </div>
+            <div class="paso-inactivo">
+                <p>Paso 2:</p>
+                <h6>Seleccionar asientos</h6>
+            </div>
+            <div class="paso-activo">
+                <p>Paso 3:</p>
+                <h6>Datos personales</h6>
+            </div>
+            
+    
+        </div>
         <form id="reserva-form">
             <label>Nombre: <input type="text" id="nombre" required></label><br>
             <label>Apellido: <input type="text" id="apellido" required></label><br>
@@ -32,7 +157,157 @@
         <h3>Resumen de la Reserva</h3>
         <div id="resumen"></div>
     </div>
-    <script src="../js/reservas.js"></script>
+</div>
+
+<script src="../JS/reservas.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" style="background-color:lightgray;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="Red_Social">
+      <div class="rede_sociales" style="display: flex;">
+        <div class="facebook" target="_blank style="display: flex; justify-content: flex-start;">
+          <a href="https://www.facebook.com/cinemarksv" style="text-decoration: none; color: inherit; display: flex;">
+            <img src="/SRC/Resources/ico-footer-facebook.webp" alt="" height="40px">
+            <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>FACEBOOK</b> <br> CINEMARKSV</p>
+          </a>
+          
+        </div>
+
+        <div class="twitter" target="blank" style="display: flex; justify-content: flex-start; margin-left: 150px;">
+          <a href="https://twitter.com/cinemarksv" style="text-decoration: none; color: inherit; display: flex;">
+            <img src="/SRC/Resources/ico-footer-twitter.webp" alt="" height="40px">
+            <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>TWITTER</b> <br> CINEMARKSV</p>
+          </a>
+          
+        </div>
+
+        <div class="instagram" style="display: flex; justify-content: flex-start; margin-left: 150px;">
+          <a href="https://www.instagram.com/cinemark_caksv" target="blank" style="text-decoration: none; color: inherit; display: flex;">
+            <img src="/SRC/Resources/ico-footer-instagram.webp" alt="" height="40px">
+            <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>INSTAGRAM</b> <br> CINEMARK_CA</p>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div style="justify-content: flex-start">
+      <p style="text-align: left;"><b>DESCARGA LA APP</b></p>
+      
+        <div class="aplicaciones" style="display: flex;">
+          <a href="https://play.google.com/store/apps/details?id=com.cinemarkca.cinemarkapp" target="_blank">
+          <img src="/SRC/Resources/google.webp" alt="" style="height: 50px;">
+          </a>
+          <a href="https://apps.apple.com/us/app/cinemarkca/id929218361" target="_blank">
+            <img src="/SRC/Resources/apple.webp" alt="" style="height: 50px; margin-left: 10px;">
+          </a>
+        </div>
+      
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="align-items: center;">
+          <!-- Content -->
+          <img src="/SRC/Resources/Logo-header-footer.webp" alt="" style="width: 200px;">
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            PROGRAMACIÓN
+          </h6>
+          <hr>
+          <p>
+            <a href="/HTML/cartelera.html" class="text-reset" style="text-decoration: none; color: inherit;">Cartelera</a>
+          </p>
+          <p>
+            <a href="/HTML/proximos-estrenos.html" class="text-reset" style="text-decoration: none; color: inherit;">Próximos estrenos</a>
+          </p>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            SOBRE CINEMARK
+          </h6>
+          <hr>
+          <p>
+            <a href="/HTML/quienesSomos.html"  class="text-reset" style="text-decoration: none; color: inherit; ">Quiénes Somos</a>
+          </p>
+          <p>
+            <a href="/HTML/terminosyCondiciones.html" class="text-reset" style="text-decoration: none; color: inherit; ">Términos y condiciones</a>
+          </p>
+         
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            CONTÁCTANOS
+          </h6>
+          <hr>
+          <p>
+            <a href="/HTML/contactanos.html" class="text-reset" style="text-decoration: none; color: inherit;">Escríbenos</a>
+          </p>
+          
+         
+        </div>
+        
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright - Cinemark Santa Ana
+    
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+<div id="trailer-modal" class="modal">
+  <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="trailer-content"></div>
+  </div>
+</div>
 </body>
 </html>
-
