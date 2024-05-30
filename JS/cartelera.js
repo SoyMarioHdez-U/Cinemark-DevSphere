@@ -6,6 +6,7 @@ async function cargarFunciones() {
 
         
         const selectFechas = document.getElementById('fechas');
+        selectFechas.style.width = '210px';
         const hoy = new Date();
 
         if (selectFechas.options.length >= 10) {
