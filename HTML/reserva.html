@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva de Butacas</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div id="entradas" class="step active">
+        <h2>Entradas</h2>
+        <label>Entrada Adulto ($5.50): <input type="number" id="adulto" min="0" value="0"></label><br>
+        <label>Entrada Joven ($3.50): <input type="number" id="joven" min="0" value="0"></label><br>
+        <label>Entrada Adulto Mayor ($2.50): <input type="number" id="adulto_mayor" min="0" value="0"></label><br>
+        <button id="butaca-btn" >Siguiente</button>
+    </div>
+
+    <div id="reserva-butaca" class="step">
+        <h2>Selecciona tus butacas</h2>
+        <div id="butacas-container"></div>
+        <button id="reserva-btn" >Siguiente</button>
+    </div>
+
+    <div id="factura" class="step">
+        <h2>Información del Cliente</h2>
+        <form id="reserva-form">
+            <label>Nombre: <input type="text" id="nombre" required></label><br>
+            <label>Apellido: <input type="text" id="apellido" required></label><br>
+            <label>Teléfono: <input type="text" id="telefono" required></label><br>
+            <label>Correo: <input type="email" id="correo" required></label><br>
+            <button type="submit">Reservar</button>
+        </form>
+        <h3>Resumen de la Reserva</h3>
+        <div id="resumen"></div>
+    </div>
+    <script src="../js/reservas.js"></script>
+</body>
+</html>
+
