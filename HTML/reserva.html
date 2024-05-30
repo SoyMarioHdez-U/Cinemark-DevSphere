@@ -28,7 +28,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="/HTML/index.html">Inicio </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/HTML/cartelera.html">Cartelera <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -42,9 +42,11 @@
 
 <div class="contenedor-reservas">
     <h3 style="font-family: 'Montserrat', sans-serif; font-weight: bold;">Proceso de reserva de entradas</h3>
-    <div id="entradas" class="step active">
+    <div class="entradas-y-resumen">
+      <!-- PASO #1 - ACTIVADO -->
+      <div id="entradas" class="step active">
         <div class="encabezado-entradas">
-            <div class="paso-activo">
+            <div class="paso-activo color-paso" style="color: white;">
                 <p>Paso 1:</p>
                 <h6>Boletos</h6>
             </div>
@@ -56,14 +58,14 @@
                 <p>Paso 3:</p>
                 <h6>Datos personales</h6>
             </div>
-            
-    
         </div>
+
+        <!-- DESDE AQUÍ COPIAR PARA LOS DEMÁS Y BORRAR LO QUE NO ES NECESARIO-->
         <div class="info-boletos">
           <div class="seleccionar-boletos">
             <div class="labels-boletos">
               <div class="boleto">
-                <label> <img  style="height: 20px;" src="https://cdn-icons-png.flaticon.com/512/708/708721.png" alt="Tu imagen"> ENTRADA ADULTO <b>($5.50)</b>:
+                <label> <img  style="height: 20px;" src="../SRC/Resources/boletos-rojos.png" alt="Tu imagen"> ENTRADA ADULTO <b>($5.50)</b>:
               </div>
               <div class="cantidad-boletos">
                 <input type="number" id="adulto" min="0" value="0" class="form-control input-small">
@@ -72,7 +74,7 @@
             <br>
             <div class="labels-boletos">
               <div class="boleto">
-                <label> <img  style="height: 20px;" src="https://cdn-icons-png.flaticon.com/512/708/708721.png" alt="Tu imagen"> ENTRADA ESTUDIANTE <b>($3.50)</b>:
+                <label> <img  style="height: 20px;" src="../SRC/Resources/boletos-rojos.png" alt="Tu imagen"> ENTRADA ESTUDIANTE <b>($3.50)</b>:
               </div>
               <div class="cantidad-boletos">
                 <input type="number" id="joven" min="0" value="0" class="form-control input-small"></label>
@@ -81,7 +83,7 @@
             <br>
             <div class="labels-boletos">
               <div class="boleto">
-                <label> <img  style="height: 20px;" src="https://cdn-icons-png.flaticon.com/512/708/708721.png" alt="Tu imagen"> ENTRADA ADULTO MAYOR: <b>($3.50)</b>:
+                <label> <img  style="height: 20px;" src="../SRC/Resources/boletos-rojos.png" alt="Tu imagen"> ENTRADA ADULTO MAYOR: <b>($3.50)</b>:
               </div>
               <div class="cantidad-boletos">
                 <input type="number" id="adulto_mayor" min="0" value="0" class="form-control input-small">
@@ -94,20 +96,24 @@
             <div class="resumen-boletos">
               <br>
               <p>TOTAL A PAGAR:</p>
-              <H5>$0.00</h5>
+              <H5 id="total-a-pagar"></h5>
               <br>
             </div>
-            <div class="info-peli-reserva">
-              <p>Película:</p>
-              <label for="">Nombre de la peli</label>
+            <div id="info-peli-reserva" class="info-peli-reserva">
               
             </div>
           </div>
           
             
         </div>
-        
     </div>
+    <div id="datos">
+      <div id="informacion">
+
+      </div>
+    </div>
+    
+    
     
     <div id="reserva-butaca" class="step">
         <div class="encabezado-entradas">
@@ -116,8 +122,8 @@
                 <h6>Boletos</h6>
             </div>
             <div class="paso-activo">
-                <p>Paso 2:</p>
-                <h6>Seleccionar asientos</h6>
+                <p style="color: white;">Paso 2:</p>
+                <h6 style="color: white;">Seleccionar asientos</h6>
             </div>
             <div class="paso-inactivo">
                 <p>Paso 3:</p>
@@ -157,6 +163,8 @@
         <h3>Resumen de la Reserva</h3>
         <div id="resumen"></div>
     </div>
+
+    
 </div>
 
 <script src="../JS/reservas.js"></script>

@@ -1,17 +1,100 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id_funcion = urlParams.get('id_funcion');
-console.log(id_funcion)
+
+document.getElementById('adulto').addEventListener('input', updateTotal);
+document.getElementById('joven').addEventListener('input', updateTotal);
+document.getElementById('adulto_mayor').addEventListener('input', updateTotal);
+
 const butacaBtn = document.getElementById('butaca-btn');
 const reservaBtn = document.getElementById('reserva-btn');
+const informacion = document.getElementById('datos')
+const infoDiv = document.getElementById('informacion')
+const infoPeliDiv = document.getElementById('info-peli-reserva')
 
 let seleccionadas = [];
 let nombreB = [];
+let entrada = []
 let totalEntradas = 0;
 let totalPrecio = 0;
+
+document.addEventListener('DOMContentLoaded', loadDatos);
+
+document.addEventListener('DOMContentLoaded', updateTotal());
 
 butacaBtn.addEventListener('click', elegir)
 
 reservaBtn.addEventListener('click', pago)
+
+async function loadDatos() {
+
+    const res = await fetch(`http://localhost:3000/cartelera/${id_funcion}`)
+    const data = await res.json()
+
+    data.forEach(info =>
+        {
+
+            console.log("Datos", info)
+
+            const imagen = document.createElement('img');
+            imagen.alt = info.pelicula;
+            imagen.src = info.imagen;
+            imagen.width = 300;
+            imagen.style.marginBottom = '20px';
+
+
+            infoDiv.appendChild(imagen)
+
+        })
+
+
+        data.forEach(infoPeli =>
+            {
+    
+                console.log("Datos", infoPeli)
+    
+                const tituloP = document.createElement('p')
+                tituloP.textContent = 'Película:'
+
+                const titulo = document.createElement('h6')
+                titulo.textContent = infoPeli.pelicula
+                titulo.style.marginLeft = '10px';
+    
+
+                const fechaP = document.createElement('p')
+                fechaP.textContent = 'Fecha:'
+
+                const fecha = document.createElement('h6')
+                fecha.textContent = infoPeli.fecha
+                fecha.style.marginLeft = '10px';
+    
+
+                const horaP = document.createElement('p')
+                horaP.textContent = 'Hora:'
+
+                const hora = document.createElement('h6')
+                hora.textContent = infoPeli.hora_inicio
+                hora.style.marginLeft = '10px';
+
+                const salaP = document.createElement('p')
+                salaP.textContent = 'Sala:'
+    
+                const sala = document.createElement('h6')
+                sala.textContent = infoPeli.sala
+                sala.style.marginLeft = '10px';
+    
+                infoPeliDiv.appendChild(tituloP)
+                infoPeliDiv.appendChild(titulo)
+                infoPeliDiv.appendChild(fechaP)
+                infoPeliDiv.appendChild(fecha)
+                infoPeliDiv.appendChild(horaP)
+                infoPeliDiv.appendChild(hora)
+                infoPeliDiv.appendChild(salaP)
+                infoPeliDiv.appendChild(sala)
+    
+            })
+    
+
+}
 
 function elegir() {
     const adulto = parseInt(document.getElementById('adulto').value);
@@ -19,9 +102,26 @@ function elegir() {
     const adulto_mayor = parseInt(document.getElementById('adulto_mayor').value);
     totalEntradas = adulto + joven + adulto_mayor;
 
+    if(adulto==0)
+        {} else {entrada.push(`Adulto [${adulto}] `)
+        }
+
+    if(joven==0)
+        {} else { entrada.push(`Joven [${joven}] `)
+        }
+
+    if(adulto_mayor==0)
+        {} else { entrada.push(`Adulto Mayor [${adulto_mayor}] `)
+        }
+
     totalPrecio = (adulto * 5.50) + (joven * 3.50) + (adulto_mayor * 2.50);
 
     if (totalEntradas > 0) {
+
+        const precio = document.createElement('h3')
+        precio.textContent = entrada.join(' ')
+        infoDiv.appendChild(precio)
+
         document.getElementById('entradas').classList.remove('active');
         document.getElementById('reserva-butaca').classList.add('active');
         cargarButacas();
@@ -80,6 +180,16 @@ function pago() {
     } else {
         alert('Debe seleccionar todas las butacas');
     }
+}
+
+function updateTotal() {
+    const adulto = parseInt(document.getElementById('adulto').value) || 0;
+    const joven = parseInt(document.getElementById('joven').value) || 0;
+    const adulto_mayor = parseInt(document.getElementById('adulto_mayor').value) || 0;
+
+    const totalPrecio = (adulto * 5.50) + (joven * 3.50) + (adulto_mayor * 3.50);
+    
+    document.getElementById('total-a-pagar').textContent = `$${totalPrecio.toFixed(2)}`;
 }
 
 document.getElementById('reserva-form').onsubmit = async function(e) {

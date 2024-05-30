@@ -95,6 +95,12 @@ async function cargarFunciones() {
             horariosPelicula.appendChild(horaButton);
         });
 
+        imagen.addEventListener('click', () => { // Listener nuevo 
+            
+            window.location.href = `detalle.html?id=${funcion.id_pelicula}`;
+        });
+
+
         infoPeli.appendChild(titulo);
         infoPeli.appendChild(duracion);
         infoPeli.appendChild(trailer);

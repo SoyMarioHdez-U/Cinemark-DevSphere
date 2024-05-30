@@ -32,7 +32,7 @@
     color: black;
 }
 
-.paso-activo p, h6{
+.color-paso p{
     color: white;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .resumen-boletos{
-    width: 195px;
+    width: 230px;
     margin-left: 5px;
     background-color: black;
 }
@@ -84,6 +84,7 @@
     color: rgb(255, 255, 255);
     margin-left: 20px;
     margin-bottom: 20px;
+    
 
 }
 
@@ -92,9 +93,27 @@
 }
 
 .boleto{
-    width: 300px;
+    width: 350px;
 }
 
 .input-small{
     width: 70px;
+}
+
+.entradas-y-resumen{
+    display: flex;
+    
+}
+
+.entradas-y-resumen img{
+    margin-left: 20px;
+}
+
+.info-peli-reserva p, label{
+    margin: 0 0 1px; /* Reducido el margen inferior */
+    margin-left: 10px;
+}
+
+.info-peli-reserva p{
+    font-weight: bold;
 }
