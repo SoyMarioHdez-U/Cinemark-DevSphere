@@ -1,0 +1,49 @@
+.butaca {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 10px; /* Espacio entre butacas */
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    border: 2px solid black; /* Borde negro */
+    border-radius: 5px; /* Bordes redondeados para parecer asientos */
+    background-color: grey;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para dar efecto 3D */
+}
+.butaca.vacia {
+    background-color: grey;
+}
+.butaca.reservada {
+    background-color: red;
+    cursor: not-allowed;
+}
+.butaca.seleccionada {
+    background-color: green;
+}
+
+.butacas-container {
+    width: 900px;
+}
+
+.pantalla-sala {
+    width: 800px;
+    display: block;
+    margin: 0 auto 20px auto;
+    margin-left: 20px;
+}
+
+img.pantalla-sala {
+    margin-left: 55px;
+}
+
+.fila {
+    display: flex;
+    justify-content: center; /* Centrar las butacas en cada fila */
+    margin-bottom: 15px; /* Espacio entre filas */
+}
+
+.reserva-resumen{
+    display: flex;
+    justify-content: space-between;
+}

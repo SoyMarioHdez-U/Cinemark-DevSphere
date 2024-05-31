@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva de butacas</title>
-    <link rel="icon" href="/SRC/Resources/Cinemark_-_2022_icon.png" type="image/png">
+    <link rel="icon" href="../SRC/Resources/Cinemark_-_2022_icon.png" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/CSS/estiloIndex.css">
-    <link rel="stylesheet" href="/CSS/estiloReservas.css">
+    <link rel="stylesheet" href="../CSS/estiloIndex.css">
+    <link rel="stylesheet" href="../CSS/estiloReservas.css">
+    <link rel="stylesheet" href="../CSS/estiloButacas.css">
      <!-- Font Awesome CSS -->
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
@@ -59,6 +60,7 @@
                 <h6>Datos personales</h6>
             </div>
         </div>
+        
 
         <!-- DESDE AQUÍ COPIAR PARA LOS DEMÁS Y BORRAR LO QUE NO ES NECESARIO-->
         <div class="info-boletos">
@@ -107,6 +109,66 @@
             
         </div>
     </div>
+      <!-- PASO #2 ACTIVADO-->
+    <div id="reserva-butaca" class="step">
+      <div class="encabezado-entradas">
+          <div class="paso-inactivo">
+              <p>Paso 1:</p>
+              <h6>Boletos</h6>
+          </div>
+          <div class="paso-activo">
+              <p style="color: white;">Paso 2:</p>
+              <h6 style="color: white;">Seleccionar asientos</h6>
+          </div>
+          <div class="paso-inactivo">
+              <p>Paso 3:</p>
+              <h6>Datos personales</h6>
+          </div>
+          
+  
+      </div>
+      <div id="butacas-container" class="butacas-container"></div>
+      <button id="reserva-btn" class="btn btn-danger">Siguiente</button>
+  </div>
+
+  <!--paso #3 ACTIVADO-->
+    <div id="factura" class="step">
+      <div class="encabezado-entradas">
+          <div class="paso-inactivo">
+              <p>Paso 1:</p>
+              <h6>Boletos</h6>
+          </div>
+          <div class="paso-inactivo">
+              <p>Paso 2:</p>
+              <h6>Seleccionar asientos</h6>
+          </div>
+          <div class="paso-activo">
+              <p style="color: white;">Paso 3:</p>
+              <h6 style="color: white;">Datos personales</h6>
+          </div>
+          
+
+      </div>
+      <div class="reserva-resumen">
+        <div class="formulario-reserva">
+            <form id="reserva-form" style="font-family: 'Montserrat', sans serif;">
+              <label>Nombre: <input type="text" id="nombre" class="form-control" required></label><br>
+              <label>Apellido: <input type="text" class="form-control" id="apellido" required></label><br>
+              <label>Teléfono: <input type="text" class="form-control"id="telefono" required></label><br>
+              <label>Correo: <input type="email" id="correo" class="form-control" required></label><br>
+              <button type="submit" class="btn btn-danger" style="margin-bottom: 20px; margin-top: 20px">Reservar</button>
+          </form>
+        </div>
+        <div class="detalles-reserva">
+          <h3>Resumen de la Reserva</h3>
+          <div id="resumen"></div>
+        </div>
+      </div>
+        
+      
+  </div>
+
+  <!-- INFO - PELI -->
     <div id="datos">
       <div id="informacion">
 
@@ -115,54 +177,8 @@
     
     
     
-    <div id="reserva-butaca" class="step">
-        <div class="encabezado-entradas">
-            <div class="paso-inactivo">
-                <p>Paso 1:</p>
-                <h6>Boletos</h6>
-            </div>
-            <div class="paso-activo">
-                <p style="color: white;">Paso 2:</p>
-                <h6 style="color: white;">Seleccionar asientos</h6>
-            </div>
-            <div class="paso-inactivo">
-                <p>Paso 3:</p>
-                <h6>Datos personales</h6>
-            </div>
-            
+
     
-        </div>
-        <div id="butacas-container"></div>
-        <button id="reserva-btn" class="btn btn-primary">Siguiente</button>
-    </div>
-    
-    <div id="factura" class="step">
-        <div class="encabezado-entradas">
-            <div class="paso-inactivo">
-                <p>Paso 1:</p>
-                <h6>Boletos</h6>
-            </div>
-            <div class="paso-inactivo">
-                <p>Paso 2:</p>
-                <h6>Seleccionar asientos</h6>
-            </div>
-            <div class="paso-activo">
-                <p>Paso 3:</p>
-                <h6>Datos personales</h6>
-            </div>
-            
-    
-        </div>
-        <form id="reserva-form">
-            <label>Nombre: <input type="text" id="nombre" required></label><br>
-            <label>Apellido: <input type="text" id="apellido" required></label><br>
-            <label>Teléfono: <input type="text" id="telefono" required></label><br>
-            <label>Correo: <input type="email" id="correo" required></label><br>
-            <button type="submit">Reservar</button>
-        </form>
-        <h3>Resumen de la Reserva</h3>
-        <div id="resumen"></div>
-    </div>
 
     
 </div>
@@ -184,13 +200,13 @@
 
 
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-body-tertiary text-muted" style="background-color:lightgray;">
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" style="background-color:lightgray; margin-top: 20px;">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
     <div class="Red_Social">
-      <div class="rede_sociales" style="display: flex;">
-        <div class="facebook" target="_blank style="display: flex; justify-content: flex-start;">
+      <div class="redes_sociales" style="display: flex;">
+        <div class="facebook" target="_blank" style="display: flex; justify-content: flex-start;">
           <a href="https://www.facebook.com/cinemarksv" style="text-decoration: none; color: inherit; display: flex;">
             <img src="/SRC/Resources/ico-footer-facebook.webp" alt="" height="40px">
             <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>FACEBOOK</b> <br> CINEMARKSV</p>
@@ -199,7 +215,7 @@
         </div>
 
         <div class="twitter" target="blank" style="display: flex; justify-content: flex-start; margin-left: 150px;">
-          <a href="https://twitter.com/cinemarksv" style="text-decoration: none; color: inherit; display: flex;">
+          <a href="https://twitter.com/cinemarksv" target="blank" style="text-decoration: none; color: inherit; display: flex;">
             <img src="/SRC/Resources/ico-footer-twitter.webp" alt="" height="40px">
             <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>TWITTER</b> <br> CINEMARKSV</p>
           </a>
@@ -207,7 +223,7 @@
         </div>
 
         <div class="instagram" style="display: flex; justify-content: flex-start; margin-left: 150px;">
-          <a href="https://www.instagram.com/cinemark_caksv" target="blank" style="text-decoration: none; color: inherit; display: flex;">
+          <a href="https://www.instagram.com/cinemark_ca" target="blank" style="text-decoration: none; color: inherit; display: flex;">
             <img src="/SRC/Resources/ico-footer-instagram.webp" alt="" height="40px">
             <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>INSTAGRAM</b> <br> CINEMARK_CA</p>
           </a>

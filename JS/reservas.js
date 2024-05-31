@@ -136,20 +136,45 @@ async function cargarButacas() {
 
     const container = document.getElementById('butacas-container');
     container.innerHTML = '';
+    
+    // Insertando la imagen de la pantalla
+    const imagenSala = document.createElement('img');
+    imagenSala.className = 'pantalla-sala';
+    imagenSala.src = 'https://firebasestorage.googleapis.com/v0/b/practica09-daw.appspot.com/o/Archivos%2FPANTALLA.png?alt=media&token=6d8f8ace-ba2b-4eec-a0c9-d478d5aaa53a';
+    container.appendChild(imagenSala);
 
+    // Agrupar las butacas por filas
+    const filas = {};
     butacas.forEach(butaca => {
-        const div = document.createElement('div');
-        div.className = `butaca ${butaca.estado_butaca.toLowerCase()}`;
-        div.textContent = butaca.butaca;
-        div.dataset.id = butaca.id_butaca;
-
-        if (butaca.estado_butaca === 'Vacía') {
-            div.onclick = () => toggleButaca(div);
+        const fila = butaca.butaca.charAt(0);
+        if (!filas[fila]) {
+            filas[fila] = [];
         }
+        filas[fila].push(butaca);
+    });
 
-        container.appendChild(div);
+    // Crear y añadir las filas al contenedor
+    Object.keys(filas).sort().forEach(fila => {
+        const filaDiv = document.createElement('div');
+        filaDiv.className = 'fila';
+
+        filas[fila].forEach(butaca => {
+            const div = document.createElement('div');
+            div.className = `butaca ${butaca.estado_butaca.toLowerCase()}`;
+            div.textContent = butaca.butaca;
+            div.dataset.id = butaca.id_butaca;
+
+            if (butaca.estado_butaca === 'Vacía') {
+                div.onclick = () => toggleButaca(div);
+            }
+
+            filaDiv.appendChild(div);
+        });
+
+        container.appendChild(filaDiv);
     });
 }
+
 
 function toggleButaca(div) {
     const id = div.dataset.id;
@@ -221,5 +246,5 @@ document.getElementById('reserva-form').onsubmit = async function(e) {
     }
 
     alert('Reserva realizada con éxito');
-    window.location.href = 'funciones.html';
+    window.location.href = 'cartelera.html';
 };
