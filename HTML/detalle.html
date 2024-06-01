@@ -2,6 +2,250 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la película</title>
+    <link rel="icon" href="../SRC/Resources/Cinemark_-_2022_icon.png" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/estiloIndex.css">
+    <link rel="stylesheet" href="../CSS/estiloDetalles.css">
+    
+    
+     <!-- Font Awesome CSS -->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <a class="navbar-brand" href="/HTML/index.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Cinemark_Logo.svg" width="128" height="30" class="d-inline-block align-top" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/HTML/index.html">Inicio </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/HTML/cartelera.html">Cartelera <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/HTML/proximos-estrenos.html">Próximos estrenos</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+   
+<!-- AQUÍ COMIENZA EL CONTENIDO -->
+
+<div class="contenedor-detalles">
+    <div id="detalle-container" class="detalle-container">
+        <div class="detalles-pelicula-det">
+            <img id="imagen" class="imagen-detalle" alt="">
+                
+        </div>
+        <div class="detalles-pelicula-detalles">
+            <div class="toda-la-info" >
+                <div>
+                    <h3>Ver trailer</h3>
+                    <div id="video" class="trailer-detalles"></div>
+                </div>
+  
+               
+                <h3>Sinopsis</h3>
+                <h3 id="titulo"></h3>
+                <p id="descripcion" class="descripcion-peli" style="text-align: justify;"></p>
+                <div class="datos-tecnicos">
+                    <div class="director-div">
+                        <p style="font-weight: bold; color: red;">Director:</p>
+                        <p id="director" style="color: white;"></p>
+                    </div>
+                    <div class="idioma-div">
+                        <p style="font-weight: bold; color: red;">Idioma:</p>
+                        <p id="idioma" style="color: white;"></p>
+                    </div>
+                    <div class="duracion-div">
+                        <p style="font-weight: bold; color: red;">Duración:</p>
+                        <p id="duracion" style="color: white"></p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="publi">
+            <img src="https://scontent.fsal2-2.fna.fbcdn.net/v/t39.30808-6/447213459_868192942016486_1548443790618300070_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGtWBLYqnfpX9xd9BcqVNdjS9mnPoFtsulL2ac-gW2y6UUWGGcBQeDEPFiStcATgZJqkulAsXikV5GLbJMBL3jx&_nc_ohc=EROr4iTl-AgQ7kNvgHYySrE&_nc_ht=scontent.fsal2-2.fna&oh=00_AYAEB5Rir5b3a8fFsXTJw35EUceX9t76OrINzH8bl6MMWQ&oe=66607230" alt="">
+            <img src="https://scontent.fsal2-1.fna.fbcdn.net/v/t39.30808-6/447206459_868148352020945_8180382429573155125_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeE-5vfJFrBrd7QmW-NHNVCXkT1BAonmE32RPUECieYTfVHXQQB70CB6iKXW6wrAmVo5DG0syFREu0uSmArSS5Sh&_nc_ohc=o0bbTjN6R4kQ7kNvgFbL10h&_nc_ht=scontent.fsal2-1.fna&oh=00_AYA0vw28Qh8fD2IS8ViBpgD8oVDsrJoNdPtsUjzTC8om5g&oe=66609C8E" alt="">
+        </div>
+        
+        
+        
+    </div>
+    
+</div>
+
+<script src="../JS/reservas.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" style="background-color:lightgray; margin-top: 20px;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="Red_Social">
+      <div class="redes_sociales" style="display: flex;">
+        <div class="facebook" target="_blank" style="display: flex; justify-content: flex-start;">
+          <a href="https://www.facebook.com/cinemarksv" style="text-decoration: none; color: inherit; display: flex;">
+            <img src="/SRC/Resources/ico-footer-facebook.webp" alt="" height="40px">
+            <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>FACEBOOK</b> <br> CINEMARKSV</p>
+          </a>
+          
+        </div>
+
+        <div class="twitter" target="blank" style="display: flex; justify-content: flex-start; margin-left: 150px;">
+          <a href="https://twitter.com/cinemarksv" target="blank" style="text-decoration: none; color: inherit; display: flex;">
+            <img src="/SRC/Resources/ico-footer-twitter.webp" alt="" height="40px">
+            <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>TWITTER</b> <br> CINEMARKSV</p>
+          </a>
+          
+        </div>
+
+        <div class="instagram" style="display: flex; justify-content: flex-start; margin-left: 150px;">
+          <a href="https://www.instagram.com/cinemark_ca" target="blank" style="text-decoration: none; color: inherit; display: flex;">
+            <img src="/SRC/Resources/ico-footer-instagram.webp" alt="" height="40px">
+            <p style="text-align: left; line-height: 1.2; margin-left: 10px;"><b>INSTAGRAM</b> <br> CINEMARK_CA</p>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div style="justify-content: flex-start">
+      <p style="text-align: left;"><b>DESCARGA LA APP</b></p>
+      
+        <div class="aplicaciones" style="display: flex;">
+          <a href="https://play.google.com/store/apps/details?id=com.cinemarkca.cinemarkapp" target="_blank">
+          <img src="/SRC/Resources/google.webp" alt="" style="height: 50px;">
+          </a>
+          <a href="https://apps.apple.com/us/app/cinemarkca/id929218361" target="_blank">
+            <img src="/SRC/Resources/apple.webp" alt="" style="height: 50px; margin-left: 10px;">
+          </a>
+        </div>
+      
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="align-items: center;">
+          <!-- Content -->
+          <img src="/SRC/Resources/Logo-header-footer.webp" alt="" style="width: 200px;">
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            PROGRAMACIÓN
+          </h6>
+          <hr>
+          <p>
+            <a href="/HTML/cartelera.html" class="text-reset" style="text-decoration: none; color: inherit;">Cartelera</a>
+          </p>
+          <p>
+            <a href="/HTML/proximos-estrenos.html" class="text-reset" style="text-decoration: none; color: inherit;">Próximos estrenos</a>
+          </p>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            SOBRE CINEMARK
+          </h6>
+          <hr>
+          <p>
+            <a href="/HTML/quienesSomos.html"  class="text-reset" style="text-decoration: none; color: inherit; ">Quiénes Somos</a>
+          </p>
+          <p>
+            <a href="/HTML/terminosyCondiciones.html" class="text-reset" style="text-decoration: none; color: inherit; ">Términos y condiciones</a>
+          </p>
+         
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            CONTÁCTANOS
+          </h6>
+          <hr>
+          <p>
+            <a href="/HTML/contactanos.html" class="text-reset" style="text-decoration: none; color: inherit;">Escríbenos</a>
+          </p>
+          
+         
+        </div>
+        
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright - Cinemark Santa Ana
+    
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+<div id="trailer-modal" class="modal">
+  <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="trailer-content"></div>
+  </div>
+</div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
     <title>Detalle de Película</title>
     <link rel="stylesheet" href="../css/detalle.css">
 </head>

@@ -18,13 +18,13 @@ async function cargarDetalle() {
     descripcion.textContent = pelicula[0].descripcion;
 
     const director = document.getElementById('director');
-    director.textContent = `Director: ${pelicula[0].director}`;
+    director.textContent = `${pelicula[0].director}`;
 
     const idioma = document.getElementById('idioma');
-    idioma.textContent = `Idioma: ${pelicula[0].id_idioma === 1 ? 'Español' : 'Inglés'}`;
+    idioma.textContent = `${pelicula[0].id_idioma === 1 ? 'Español' : 'Inglés'}`;
 
     const duracion = document.getElementById('duracion');
-    duracion.textContent = `Duración: ${pelicula[0].duracion} minutos`;
+    duracion.textContent = `${pelicula[0].duracion} mins.`;
 
     const videoContainer = document.getElementById('video');
     videoContainer.innerHTML = pelicula[0].video;

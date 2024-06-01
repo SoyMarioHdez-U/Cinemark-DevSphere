@@ -1,0 +1,70 @@
+.detalles-pelicula-det{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+}
+
+.detalles-pelicula-det h3{
+    font-weight: bold;
+}
+
+.imagen-detalle{
+    width: 390px;
+    height: 540px;
+}
+
+.detalles-pelicula-det{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.detalle-container{
+    display: flex;
+}
+
+
+.detalles-pelicula-detalles{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 560px;
+
+}
+
+.detalles-pelicula-detalles h3{
+    font-weight: bold;
+    color: brown;
+}
+
+.descripcion-peli{
+    text-align: justify;
+}
+
+.datos-tecnicos{
+    display: flex;
+    background-color: black;
+    width: 560px;
+    height: 70px;
+    align-items: center;
+    justify-content: center; 
+    gap: 30px;
+}
+
+.director-div{
+    line-height: 0.2;
+}
+
+.idioma-div{
+    line-height: 0.2;
+}
+
+.duracion-div{
+    line-height: 0.2;
+}
+
+.publi img{
+    width: 300px;
+}
+
+.publi{
+    margin-top: 20px;
+    margin-left: 20px;
+}
