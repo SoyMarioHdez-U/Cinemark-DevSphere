@@ -199,8 +199,8 @@ function pago() {
 
         const resumen = document.getElementById('resumen');
         resumen.innerHTML = `
-            <p>Butacas seleccionadas: ${nombreB.join(', ')}</p>
-            <p>Precio total: $${totalPrecio.toFixed(2)}</p>
+            <p><b>Butacas seleccionadas:</b><br> ${nombreB.join(', ')}</p>
+            <p><b>Precio total:</b><br> $${totalPrecio.toFixed(2)}</p>
         `;
     } else {
         alert('Debe seleccionar todas las butacas');

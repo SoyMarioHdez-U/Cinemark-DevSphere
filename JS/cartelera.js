@@ -117,8 +117,11 @@ async function cargarFunciones() {
         
     });
 }
-
 function mostrarPopup(videoHTML) {
+    // Crear el div de fondo oscuro
+    const backgroundDiv = document.createElement('div');
+    backgroundDiv.className = 'body-darken';
+
     // Crear el div pop-up
     const popupDiv = document.createElement('div');
     popupDiv.className = 'popup';
@@ -126,15 +129,20 @@ function mostrarPopup(videoHTML) {
     // Agregar el contenido directamente al div pop-up
     popupDiv.innerHTML = videoHTML;
 
-    // Agregar el div pop-up al cuerpo del documento
-    document.body.appendChild(popupDiv);
-
     // Función para cerrar el pop-up
     const closeButton = document.createElement('button');
     closeButton.textContent = 'X';
-    closeButton.onclick = () => popupDiv.remove();
+    closeButton.onclick = () => {
+        popupDiv.remove();
+        backgroundDiv.remove();
+    };
     popupDiv.appendChild(closeButton);
+
+    // Agregar el div de fondo oscuro y el div pop-up al cuerpo del documento
+    document.body.appendChild(backgroundDiv);
+    document.body.appendChild(popupDiv);
 }
+
 
 
 

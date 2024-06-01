@@ -117,3 +117,113 @@
 .info-peli-reserva p{
     font-weight: bold;
 }
+
+.detalles-reserva{
+    background-color: black;
+    width: 300px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.detalles-reserva h4{
+    color: brown;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.detalles-reserva p{
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para las butacas */
+.butaca {
+    display: inline-block;
+    width: 40px; /* Aumentamos el ancho */
+    height: 50px; /* Aumentamos la altura */
+    margin: 10px; /* Aumentamos el margen */
+    text-align: center;
+    line-height: 50px; /* Ajustamos la altura del texto */
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px; /* Redondeamos los bordes */
+    background-color: #f2f2f2; /* Cambiamos el color de fondo */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Añadimos una sombra */
+}
+
+.butaca::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 15px; /* Altura del respaldo */
+    background-color: #f2f2f2; /* Cambiamos el color del respaldo */
+    position: absolute;
+    top: 0; /* Posicionamos en la parte superior */
+    left: 0;
+    border-radius: 5px 5px 0 0; /* Bordes redondeados para el respaldo */
+    box-sizing: border-box; /* Incluimos padding y border en las dimensiones totales */
+}
+
+.butaca.vacia::before,
+.butaca.reservada::before,
+.butaca.seleccionada::before {
+    border-top: none; /* Quitamos el borde superior */
+}
+
+.butaca.reservada::before {
+    background-color: #d9534f; /* Cambiamos el color del respaldo para ocupado */
+}
+
+.butaca.seleccionada::before {
+    background-color: #5cb85c; /* Cambiamos el color del respaldo para seleccionado */
+}
+
+/* Estilos para la pantalla de la sala */
+.pantalla-sala {
+    width: 800px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* Estilos para la leyenda */
+.leyenda {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.leyenda-item {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.leyenda-item .butaca {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+
+.leyenda-item span {
+    font-size: 14px;
+    margin-left: 5px;
+}

@@ -233,22 +233,48 @@
 .step.active {
     display: block;
 }
-.butaca {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin: 5px;
-    text-align: center;
-    line-height: 30px;
-    cursor: pointer;
+
+
+
+
+
+/* Estilo para el fondo oscuro */
+.body-blur {
+    filter: blur(5px);
+    pointer-events: none; /* Evita la interacción con el fondo */
 }
-.butaca.vacia {
-    background-color: grey;
+
+/* Estilo para el fondo oscuro */
+.body-darken {
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none; /* Evita la interacción con el fondo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; /* Asegura que esté debajo del pop-up */
 }
-.butaca.reservada {
+
+/* Estilo para el pop-up */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001; /* Asegura que esté encima del fondo oscuro */
+}
+
+/* Estilo para el botón de cierre */
+.popup button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     background-color: red;
-    cursor: not-allowed;
-}
-.butaca.seleccionada {
-    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
