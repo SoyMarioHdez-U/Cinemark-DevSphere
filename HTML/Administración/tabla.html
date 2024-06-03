@@ -41,8 +41,8 @@
     <div class="container_peliculasAdmin" style="margin-top: 20px; margin-left: 165px; margin-right: 165px;">
         <div class="encabezado_peliculas" style="display: flex; justify-content: space-between;">
             <div class="titulos">
-                <h3 style="font-family: 'Montserrat', sans-serif; font-weight: bolder;">Funciones</h3>
-                <p style="font-family: 'Montserrat', sans-serif; margin-top: 5px;">Listado de todas las funciones</p>
+                <h3 style="font-family: 'Montserrat', sans-serif; font-weight: bolder;">Películas</h3>
+                <p style="font-family: 'Montserrat', sans-serif; margin-top: 5px;">Listado de todas las peliculas</p>
             </div>
             <div class="ordenamiento" style="display: flex; align-items: center;">
                 <p style="margin-right: 15px; margin-top: 10px;">Ordenar por:    </p>
@@ -56,7 +56,7 @@
                     <option value="idioma">Idioma</option>
                 </select>
                 
-                <a href="/HTML/Administración/nuevaFuncion.html" class="btn btn-danger" role="button">Nueva función</a>
+                <a href="/HTML/Administración/nuevaPelicula.html" class="btn btn-danger" role="button">Nueva película</a>
 
             </div>
             
@@ -64,7 +64,7 @@
         
 
         <div class="table-container">
-            <table id="tablaPeliculas">
+            <table id="data-table">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -87,7 +87,7 @@
     </div>
     
 
-    <script src="/JS/Administración/funciones.js"></script>
+    <script src="/JS/Administración/tabla.js"></script>
     
     
     
@@ -104,7 +104,18 @@
 </html>
 
 
-    <nav class="main-containers">
-        <label for="button"><button id= btn-newf type="button" class="btn btn-primary">Nueva función</button></label>
-        <label for="button"><button id= btn-regre type="button" class="btn btn-primary">Regresar</button></label>
-    </nav>
+
+<body>
+    
+
+    <div class="main-containers">
+        <div class="botones-volver-regresar">
+            <label for="button"><button id= btn-newp type="button" class="btn btn-primary">Nueva Pelicula</button></label>
+            <label for="button"><button id= btn-regre type="button" class="btn btn-primary">Regresar</button></label>
+        </div>
+        
+    
+       
+    
+    
+</body>

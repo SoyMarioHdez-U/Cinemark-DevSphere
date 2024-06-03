@@ -41,22 +41,20 @@
     <div class="container_peliculasAdmin" style="margin-top: 20px; margin-left: 165px; margin-right: 165px;">
         <div class="encabezado_peliculas" style="display: flex; justify-content: space-between;">
             <div class="titulos">
-                <h3 style="font-family: 'Montserrat', sans-serif; font-weight: bolder;">Funciones</h3>
-                <p style="font-family: 'Montserrat', sans-serif; margin-top: 5px;">Listado de todas las funciones</p>
+                <h3 style="font-family: 'Montserrat', sans-serif; font-weight: bolder;">Reservas</h3>
+                <p style="font-family: 'Montserrat', sans-serif; margin-top: 5px;">Listado de todas las reservas</p>
             </div>
             <div class="ordenamiento" style="display: flex; align-items: center;">
                 <p style="margin-right: 15px; margin-top: 10px;">Ordenar por:    </p>
                 <select id="ordenarPor" style="font-family: 'Montserrat', sans-serif; margin-right: 10px;">
                     <option value="" disabled selected>Seleccionar</option>
-                    <option value="titulo-asc">Título A~Z</option>
-                    <option value="titulo-desc">Título Z~A</option>
-                    <option value="duracion-asc">Duración (menor a mayor)</option>
-                    <option value="duracion-desc">Duración (mayor a menor)</option>
-                    <option value="estado">Estado</option>
-                    <option value="idioma">Idioma</option>
+                    <option value="pelicula">Película (Ascendente)</option>
+                    <option value="fecha">Fecha (Ascendente)</option>
+                    <option value="hora">Hora (Ascendente)</option>
+                    <option value="sala">Sala (Ascendente)</option>
                 </select>
                 
-                <a href="/HTML/Administración/nuevaFuncion.html" class="btn btn-danger" role="button">Nueva función</a>
+                <a href="/HTML/Administración/nuevaReserva.html" class="btn btn-danger" role="button">Nueva reserva</a>
 
             </div>
             
@@ -64,19 +62,20 @@
         
 
         <div class="table-container">
-            <table id="tablaPeliculas">
+            <table id="data-table">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>PELÍCULA</th>
-                        <th>DURACIÓN</th>
-                        <th>DIRECTOR</th>
-                        <th>IDIOMA</th>
-                        <th>ESTADO</th>
+                        <th>FECHA</th>
+                        <th>HORA</th>
+                        <th>SALA</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
+                    
+                    <!-- Puedes agregar más filas aquí según sea necesario -->
                     
                 </tbody>
             </table>
@@ -87,7 +86,36 @@
     </div>
     
 
-    <script src="/JS/Administración/funciones.js"></script>
+    <script src="/JS/Administración/reservas.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Obtener los elementos relevantes
+            var selectOrdenarPor = document.getElementById("ordenarPor");
+            var tablaFunciones = document.getElementById("tablaFunciones");
+            var filas = Array.from(tablaFunciones.querySelectorAll("tbody tr"));
+    
+            // Agregar evento de cambio al select
+            selectOrdenarPor.addEventListener("change", function() {
+                // Obtener el valor seleccionado del select
+                var valorSeleccionado = selectOrdenarPor.value;
+    
+                // Ordenar las filas según el valor seleccionado
+                filas.sort(function(a, b) {
+                    var valorA = a.querySelector("td[data-ordenar='" + valorSeleccionado + "']").innerText.toLowerCase();
+                    var valorB = b.querySelector("td[data-ordenar='" + valorSeleccionado + "']").innerText.toLowerCase();
+                    return valorA.localeCompare(valorB);
+                });
+    
+                // Limpiar la tabla
+                tablaFunciones.querySelector("tbody").innerHTML = "";
+    
+                // Agregar las filas ordenadas de nuevo a la tabla
+                filas.forEach(function(fila) {
+                    tablaFunciones.querySelector("tbody").appendChild(fila);
+                });
+            });
+        });
+    </script>
     
     
     
@@ -102,9 +130,11 @@
     <!-- Copyright -->
   </footer>
 </html>
+    <!-- Copyright -->
+  </footer>
+</html>
 
-
-    <nav class="main-containers">
-        <label for="button"><button id= btn-newf type="button" class="btn btn-primary">Nueva función</button></label>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <label for="button"><button id= btn-newp type="button" class="btn btn-primary">Nueva Reserva</button></label>
         <label for="button"><button id= btn-regre type="button" class="btn btn-primary">Regresar</button></label>
     </nav>

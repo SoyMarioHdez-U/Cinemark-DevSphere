@@ -40,35 +40,48 @@
 
 
     <!-- AQUÍ VA EL CONTENIDO--> 
-    <div class="container mt-4">
-        <h3>Agregar nueva función</h3>
+    <div class="Formulario">
+        <h3>Agregar nueva Funcion</h3>
         <form id="add-form">
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="hora_inicio">Hora:</label>
-                    <input type="text" class="form-control" id="hora_inicio" name="hora_inicio">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="fecha">Fecha:</label>
-                    <input type="text" class="form-control" id="fecha" name="fecha">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="id_pelicula">Número de Película:</label>
-                    <input type="number" class="form-control" id="id_pelicula" name="id_pelicula">
+                    <label for="telefono">Número de Telefono:</label>
+                    <input type="number" class="form-control" id="telefono" name="telefono">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="id_sala">Número de Sala:</label>
-                    <input type="number" class="form-control" id="id_sala" name="id_sala">
+                    <label for="correo">Correo:</label>
+                    <input type="text" class="form-control" id="correo" name="correo">
                 </div>
             </div>
-            
+            <div class="form-group col-md-6">
+                <label for="id_funcion">Número de funcion:</label>
+                <input type="number" class="form-control" id="id_funcion" name="id_funcion">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="id_butaca">Número de butaca:</label>
+                <input type="number" class="form-control" id="id_butaca" name="id_butaca">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="id_estado">Estado:</label>
+                <input type="number" class="form-control" id="id_estado" name="id_estado">
+            </div>
+        
             <button type="submit" class="btn btn-success">Agregar</button>
         </form>
     </div>
     
-    <script src="/JS/Administración/nuevaFuncion.js"></script>
+
+    <script src="/JS/Administración/nuevaReserva.js"></script>
     
     
     
@@ -86,3 +99,15 @@
     <!-- Copyright -->
   </footer>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar una nueva pelicula</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/estiloAdministracion.css">
+
+</head>

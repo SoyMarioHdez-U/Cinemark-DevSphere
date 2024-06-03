@@ -1,27 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.container_administracion{
+.container_administracion {
     margin: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 410px;
 }
 
-.container_administracion p{
+.container_administracion p {
     font-family: 'Montserrat', sans-serif;
 }
 
-.container_administracion h3{
+.container_administracion h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
 }
 
-
-.body{
+.body {
     font-family: 'Montserrat', sans-serif !important;
 }
-
 
 .buttons {
     display: flex;
@@ -40,13 +39,16 @@
     text-align: center; /* Centrar el texto */
     text-decoration: none; /* Eliminar subrayado */
     display: block; /* Hacer que el <a> se comporte como un bloque */
+    width: 140px;
+    text-align: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
 }
 .button:hover {
     background-color: #ffffff; /* Color ocre oscuro al pasar el cursor */
     color: #b40303;
     text-decoration: none;
 }
-
 
 .table-container {
     max-height: 300px; /* Altura máxima de la tabla antes de aparecer la barra de desplazamiento */
@@ -63,7 +65,6 @@ table {
 th, td {
     text-align: left;
     padding: 8px;
-    
 }
 
 th {
@@ -73,16 +74,21 @@ th {
     position: sticky; /* Hace que los encabezados se mantengan fijos */
     top: 0; /* Se mantiene en la parte superior de la tabla */
 }
+
+/* Estilos para filas pares */
 tr:nth-child(even) {
+    background-color: white;
+}
+
+/* Estilos para filas impares */
+tr:nth-child(odd) {
     background-color: #f2f2f2;
 }
 
-tr:nth-child(odd) {
-    background-color: #e0e0e0;
-}
+
 
 tr:hover {
-    background-color: #d1d1d1;
+    background-color: #f19090 !important;
 }
 
 .details-link {
@@ -128,3 +134,16 @@ tr:hover {
     background: #800000; /* Color del thumb (barra deslizante) */
 }
 
+.cont {
+    margin-top: 20px;
+}
+
+.main-container {
+    margin-top: 10px;
+    padding-left: 20px;
+    width: 1000px;
+}
+
+.main-containers {
+    display: none;
+}
