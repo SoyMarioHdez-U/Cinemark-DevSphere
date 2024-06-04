@@ -9,6 +9,7 @@ const butacaBtn = document.getElementById('butaca-btn');
 const reservaBtn = document.getElementById('reserva-btn');
 const informacion = document.getElementById('datos')
 const infoDiv = document.getElementById('informacion')
+const botonVolver = document.getElementById('recargarReserva')
 const infoPeliDiv = document.getElementById('info-peli-reserva')
 
 let seleccionadas = [];
@@ -192,6 +193,12 @@ function toggleButaca(div) {
     }
 }
 
+//Para volver al inicio de la reserva
+botonVolver.addEventListener('click', ()=>
+{
+    window.location.href = `reserva.html?id_funcion=${id_funcion}`;
+});
+
 function pago() {
     if (seleccionadas.length === totalEntradas) {
         document.getElementById('reserva-butaca').classList.remove('active');
@@ -206,6 +213,8 @@ function pago() {
         alert('Debe seleccionar todas las butacas');
     }
 }
+
+
 
 function updateTotal() {
     const adulto = parseInt(document.getElementById('adulto').value) || 0;
