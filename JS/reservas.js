@@ -245,6 +245,19 @@ document.getElementById('reserva-form').onsubmit = async function(e) {
         });
     }
 
+    await fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            to: correo,
+            subject: 'Confirmación de Reserva',
+            text: `Tu reserva de butacas ha sido confirmada.\n\nGracias por reservar con nosotros. Las butacas que se han reservado son\n\n${nombreB} con un precio de $${totalPrecio}`
+
+        })
+    });
+
     alert('Reserva realizada con éxito');
     window.location.href = 'cartelera.html';
 };
