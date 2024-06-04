@@ -1,54 +1,54 @@
-.container_cartelera{
+.container_cartelera {
     display: flex;
     margin-top: 20px;
-    background-color:gainsboro;
+    background-color: gainsboro;
 }
 
-.pelicula{
+.pelicula {
     height: 90px;
     margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
+    transition: box-shadow 0.3s ease; /* Agrega una transición suave al efecto de brillo */
 }
 
-.container_cartelera_promo{
+.container_cartelera_promo {
     display: flex;
     margin-top: 20px;
 }
 
-.peliculas{
+.peliculas {
     display: flex;
     background-color: gainsboro;
+    width: 1040px;
+    overflow-y: auto; /* Agrega el scroll vertical */
+    scrollbar-width: thin; /* Agrega el grosor del scroll */
+    scrollbar-color: red gainsboro; /* Cambia el color del scroll */
 }
 
-.promo{
+.promo {
     margin-left: 10px;
     height: 90px;
     width: 70px;
 }
 
-
-
-.container_peliculas2{
+.container_peliculas2 {
     margin-left: 20px;
     width: 880px;
-    
 }
 
-.container_cartelera_2{
+.container_cartelera_2 {
     display: flex;
     height: auto;
     margin: 15px;
 }
 
-.filtrar{
+.filtrar {
     background-color: gainsboro;
     width: 250px;
-
 }
 
-.encabezado_filtro{
-    
+.encabezado_filtro {
     background-color: brown;
     color: white;
     text-align: center;
@@ -56,15 +56,15 @@
     font-size: 14px;
 }
 
-.body{
+.body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.container_estrenos{
+.container_estrenos {
     margin: 15px;
 }
 
-.estreno img{
+.estreno img {
     height: 300px;
     width: 217px;
     margin-right: 15px;
@@ -72,19 +72,18 @@
     display: inline-block;
 }
 
-.fecha_estreno{
+.fecha_estreno {
     background-color: brown;
     color: rgb(255, 255, 255);
     width: 217px
 }
 
-.fecha_estreno p{
+.fecha_estreno p {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    
 }
 
-.container_proximos_estrenos{
+.container_proximos_estrenos {
     display: flex;
     margin-right: 15px;
 }
@@ -95,7 +94,7 @@
     height: 320px; /* Ajusta la altura según tus necesidades */
     margin-right: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
+}
 
 .etiqueta {
     position: absolute;
@@ -109,15 +108,9 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: small;
-  }
+}
 
-  
-
-
-
-
-
-  .custom-container {
+.custom-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -162,19 +155,11 @@
     padding-left: 17px;
 }
 
-
-
-
-/* ESTILO PARA LAS PELÍCULAS DE LA CARTELERA*/
-.pelicula_cartelera img{
+/* ESTILO PARA LAS PELÍCULAS DE LA CARTELERA */
+.pelicula_cartelera img {
     width: 180px;
     height: 260px;
 }
-
-
-
-
-
 
 .popup {
     position: fixed;
@@ -202,9 +187,6 @@
     font-size: 16px;
 }
 
-
-
-
 /* Image hover effect */
 .pelicula_cartelera img {
     transition: opacity 0.3s ease;
@@ -216,13 +198,10 @@
     cursor: pointer;
 }
 
-
-
-
-
 .funcion {
     margin-bottom: 20px;
 }
+
 .horas button {
     margin-right: 5px;
 }
@@ -230,13 +209,10 @@
 .step {
     display: none;
 }
+
 .step.active {
     display: block;
 }
-
-
-
-
 
 /* Estilo para el fondo oscuro */
 .body-blur {
@@ -277,4 +253,33 @@
     color: white;
     border: none;
     cursor: pointer;
+}
+
+/* Scroll estilizado */
+.peliculas::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+}
+
+.peliculas::-webkit-scrollbar-thumb {
+    background-color: red; /* Color del scrollbar */
+    border-radius: 4px; /* Redondea los bordes del scrollbar */
+}
+
+.peliculas::-webkit-scrollbar-track {
+    background-color: gainsboro; /* Color del fondo del scrollbar */
+}
+
+
+.pelicula:hover {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5); /* Agrega un brillo blanco al pasar el cursor */
+}
+
+
+
+.pelicula img {
+    transition: filter 0.3s ease; /* Agrega una transición suave al efecto de oscurecimiento */
+}
+
+.pelicula img:hover {
+    filter: brightness(0.8); /* Reduce el brillo al 80% al pasar el cursor */
 }
